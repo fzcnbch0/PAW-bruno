@@ -1,0 +1,48 @@
+CREATE DATABASE baza_node
+USE baza_node;
+
+create table students(
+    id int NOT NULL,
+    name text NOT NULL,
+    surname text NOT NULL,
+    email text NOT NULL
+);
+
+create table subjects(
+    id int NOT NULL,
+    name text not null,
+    hoursAWeek int not null
+);
+
+create table messages(
+    id id int AUTO_INCREMENT PRIMARY key,
+    email text not null,
+    topic text not null,
+    content text not null
+);
+INSERT INTO students VALUES
+    (1, 'John', 'Doe', 'john.doe@email.com'),
+    (2, 'Jane', 'Smith', 'jane.smith@email.com'),
+    (3, 'Bob', 'Johnson', 'bob.johnson@email.com'),
+    (4, 'Alice', 'Williams', 'alice.williams@email.com'),
+    (5, 'Charlie', 'Brown', 'charlie.brown@email.com'),
+    (6, 'Eva', 'Davis', 'eva.davis@email.com'),
+    (7, 'Frank', 'Taylor', 'frank.taylor@email.com'),
+    (8, 'Grace', 'Martin', 'grace.martin@email.com'),
+    (9, 'Henry', 'White', 'henry.white@email.com'),
+    (10, 'Isabel', 'Miller', 'isabel.miller@email.com');
+
+
+INSERT INTO subjects VALUES
+    (1, 'Web Development', 15),
+    (2, 'Statistics', 25),
+    (3, 'Literature', 5),
+    (4, 'World History', 3),
+    (5, 'Astrophysics', 8),
+    (6, 'Organic Chemistry', 10),
+    (7, 'Genetics', 6),
+    (8, 'Ethics', 3),
+    (9, 'German Language', 12),
+    (10, 'Artificial Intelligence', 8);
+
+do .env -> DATABASE_URL="mysql://root:@localhost:3306/baza_node"
